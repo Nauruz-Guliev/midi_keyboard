@@ -17,7 +17,7 @@ public class MidiFileHandler {
             oos.writeObject(melody);
 
         } catch (IOException ex) {
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
     }
     public static MidiMelody readFromFile(File fileName) throws FileNotFoundException{
@@ -26,7 +26,7 @@ public class MidiFileHandler {
             return (MidiMelody) ois.readObject();
 
         } catch (IOException | ClassNotFoundException ex) {
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
         return null;
     }
