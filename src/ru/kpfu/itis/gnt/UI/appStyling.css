@@ -1,0 +1,87 @@
+#notesLabel {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #58C0EB 0%, #267fa1 100%),
+            #267fa1,
+            #58C0EB,
+            radial-gradient(center 50% 50%, radius 100%, #58C0EB, #267fa1);
+}
+#statusLabel {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #e7cea7 0%, #e5b574 100%),
+            #DEB986,
+            #e7cea7,
+            radial-gradient(center 50% 50%, radius 100%, #e7cea7, #DEB986);
+}
+.button {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #5f6775 0%, #424B54 100%),
+            #424B54,
+            #5f6775,
+            radial-gradient(center 50% 50%, radius 100%, #5f6775, #424B54);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+}
+.button:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #767c8c 0%, #535e69 100%),
+            #535e69,
+            #767c8c,
+            radial-gradient(center 50% 50%, radius 100%, #767c8c, #535e69);
+}
+.button:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+.button Text {
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #a30000 , 0,0,0,2 );
+}
+
+#buttonRecord {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #2FBF71 0%, #21945b 100%),
+            #21945b,
+            #2FBF71,
+            radial-gradient(center 50% 50%, radius 100%, #2FBF71, #21945b);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+}
+#buttonRecord:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #4cd28b 0%, #45bb81 100%),
+            #45bb81,
+            #4cd28b,
+            radial-gradient(center 50% 50%, radius 100%, #4cd28b, #45bb81);
+}
+#buttonRecord:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+
+#buttonStop {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #C32F27 0%, #a92017 100%),
+            #a92017,
+            #C32F27,
+            radial-gradient(center 50% 50%, radius 100%, #C32F27, #a92017);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+}
+#buttonStop:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #DA4B44 0%, #da3a33 100%),
+            #da3a33,
+            #DA4B44,
+            radial-gradient(center 50% 50%, radius 100%, #DA4B44, #da3a33 );
+}
+#buttonStop:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
