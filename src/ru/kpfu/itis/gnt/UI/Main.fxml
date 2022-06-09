@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" depthTest="DISABLE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kpfu.itis.gnt.Controller">
+   <children>
+      <ProgressBar fx:id="progressBar" layoutY="72.0" prefHeight="18.0" prefWidth="600.0" progress="0.0" />
+      <Button id="buttonPrevious" fx:id="buttonPrevious" layoutX="25.0" layoutY="98.0" mnemonicParsing="false" onAction="#playPrevious" prefHeight="42.0" prefWidth="155.0" text="PREVIOUS">
+         <font>
+            <Font name="MingLiU-ExtB" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <Button id="buttonPlay" fx:id="buttonPlay" layoutX="222.0" layoutY="98.0" mnemonicParsing="false" onAction="#playCurrent" prefHeight="42.0" prefWidth="155.0" text="PLAY">
+         <font>
+            <Font name="MingLiU-ExtB" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <Button id="buttonNext" fx:id="buttonNext" layoutX="420.0" layoutY="98.0" mnemonicParsing="false" onAction="#playNext" prefHeight="42.0" prefWidth="155.0" text="NEXT">
+         <font>
+            <Font name="MingLiU-ExtB" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <TextField id="filenameInput" fx:id="filenameInput" layoutX="165.0" layoutY="274.0" onMousePressed="#nullifyNotePlayed" prefHeight="50.0" prefWidth="286.0" promptText="Your file name" />
+      <Label id="notesLabel" fx:id="notesLabel" alignment="BASELINE_LEFT" contentDisplay="BOTTOM" opacity="0.87" prefHeight="74.0" prefWidth="600.0" text="MidiKeyboard" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS">
+         <font>
+            <Font name="Trebuchet MS" size="36.0" />
+         </font>
+      </Label>
+      <Button id="buttonSaveRecording" fx:id="buttonSave" layoutX="452.0" layoutY="274.0" mnemonicParsing="false" onAction="#saveRecording" prefHeight="50.0" prefWidth="148.0" text="SAVE RECORDING">
+         <effect>
+            <Reflection topOpacity="0.0" />
+         </effect></Button>
+      <Button id="buttonRecord" fx:id="buttonRecord" layoutX="6.0" layoutY="278.0" mnemonicParsing="false" onAction="#startRecording" prefHeight="42.0" prefWidth="71.0" text="RECORD" />
+      <Label id="statusLabel" fx:id="statusLabel" alignment="BASELINE_LEFT" layoutY="153.0" opacity="0.73" prefHeight="50.0" prefWidth="600.0" text="Waiting..." textAlignment="RIGHT" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Button id="buttonStop" fx:id="buttonStop" layoutX="84.0" layoutY="278.0" mnemonicParsing="false" onAction="#stopRecording" prefHeight="42.0" prefWidth="71.0" text="STOP" />
+      <ComboBox fx:id="instrumentsMenu" layoutX="135.0" layoutY="216.0" onAction="#changeInstrument" opacity="0.94" prefHeight="42.0" prefWidth="114.0" promptText="INSTRUMENT">
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect></ComboBox>
+      <Slider fx:id="volumeSlider" layoutX="408.0" layoutY="225.0" max="127.0" onMouseReleased="#changeVolume" opacity="0.78" prefHeight="24.0" prefWidth="185.0" value="100.0" />
+      <ComboBox id="channelBox" fx:id="channelBox" blendMode="SRC_ATOP" layoutX="6.0" layoutY="216.0" onAction="#changeChannel" opacity="0.94" pickOnBounds="false" prefHeight="42.0" prefWidth="114.0" promptText="CHANNEL">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect></ComboBox>
+      <ComboBox fx:id="octaveMenu" layoutX="262.0" layoutY="216.0" onAction="#changeOctave" opacity="0.94" prefHeight="42.0" prefWidth="114.0" promptText="OCTAVE">
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+      </ComboBox>
+   </children>
+</AnchorPane>
