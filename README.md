@@ -1,6 +1,12 @@
-## Midi keyboard
-Simple midi keyboard for playing 12 notes. <br />
-## Features:
+## :star: Midi keyboard
+
+Simple midi keyboard for playing 12 notes made with JavaFX. 
+
+<p align="left">
+   <img src="../main/screenshots/midi.png" width="500"/>
+</p>
+
+## :hammer_and_pick: Features
 - Playing notes using NUMPAD.
 - Switching octaves/channels/instruments with a dropdown menu.
 - Setting sound volume with a slider.
