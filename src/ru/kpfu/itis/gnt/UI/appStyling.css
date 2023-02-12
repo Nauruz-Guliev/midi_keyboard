@@ -1,4 +1,5 @@
-#notesLabel {
+#appLabel {
+    -fx-padding: 10px;
     -fx-background-color:
             linear-gradient(from 0% 93% to 0% 100%, #58C0EB 0%, #267fa1 100%),
             #267fa1,
@@ -13,6 +14,7 @@
             radial-gradient(center 50% 50%, radius 100%, #e7cea7, #DEB986);
 }
 .button {
+    -tab-text-color: white ;
     -fx-padding: 8 15 15 15;
     -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
     -fx-background-radius: 8;
@@ -23,12 +25,18 @@
             radial-gradient(center 50% 50%, radius 100%, #5f6775, #424B54);
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
 }
+
 .button:hover {
+    -tab-text-color: white ;
     -fx-background-color:
             linear-gradient(from 0% 93% to 0% 100%, #767c8c 0%, #535e69 100%),
             #535e69,
             #767c8c,
             radial-gradient(center 50% 50%, radius 100%, #767c8c, #535e69);
+}
+
+#statusLabel {
+    -fx-padding: 10px;
 }
 .button:pressed {
     -fx-padding: 10 15 13 15;

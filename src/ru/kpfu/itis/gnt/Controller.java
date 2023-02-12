@@ -135,7 +135,12 @@ public class Controller implements Initializable {
                 // playing music on another thread
                 File midiToPlay = melodies.get(currentSong);
                 displayUserMessage(midiToPlay.getName() + " is playing");
-                player = new MidiPlayer(MidiFileHandler.readFromFile(midiToPlay));
+                MidiFileHandler midiFileHandler = new MidiFileHandler();
+                Thread threadFileHandler = new Thread(midiFileHandler);
+                threadFileHandler.start();
+                player = new MidiPlayer(midiFileHandler.readFromFile(midiToPlay));
+                this.notifyAll();
+                //player = new MidiPlayer(MidiFileHandler.readFromFile(midiToPlay));
                 Thread t1 = new Thread(player);
                 t1.start();
                 //creating anonymous thread for handling progress bar state
@@ -180,7 +185,11 @@ public class Controller implements Initializable {
             if(filenameInput.getText() == null || Objects.equals(filenameInput.getText(), "")){
                 displayUserMessage("Name of file missing");
             } else {
-                MidiFileHandler.writeToFile(melody, filenameInput.getText());
+                MidiFileHandler midiFileHandler = new MidiFileHandler();
+                Thread threadWriter = new Thread(midiFileHandler);
+                threadWriter.start();
+                midiFileHandler.writeToFile(melody, filenameInput.getText());
+                this.notifyAll();
                 resetMelody();
                 displayUserMessage(filenameInput.getText() + " is saved");
                 filenameInput.setText("");
