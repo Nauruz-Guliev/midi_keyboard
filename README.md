@@ -1,20 +1,10 @@
-# Mini Midi-синтезатор
-Midi-синтезатор, который воспроизводит 12 нот выбранной октавы по нажатию клавиш NUM. Есть возможность записи мелодии в файл и воспроизведения из файла.
-
-## Что работает?
-- Воспроизведение нот по нажатию клавиш NUM. 
-- Выбор октавы/канала/инструмента из соответсвующих выпадающих меню. [пример1](https://github.com/ist-itis/task_8_2_synth-Nauruz-Guliev/blob/main/screenshots/octaves.png) 
-[пример2](https://github.com/ist-itis/task_8_2_synth-Nauruz-Guliev/blob/main/screenshots/instruments.png)
-- Ползунок для регулировки громкости воспроизвдения.
-- Запись мелодии в файл с именем, которое задаёт пользователь. [пример](https://github.com/ist-itis/task_8_2_synth-Nauruz-Guliev/blob/main/screenshots/recording.png) 
-- Воспроизведение мелодии из файла (при этом учитываются октава, канал, инструмент и громкость, которые использовались при сохранении). 
-- Прогресс бар воспроизводимой мелодии. [пример](https://github.com/ist-itis/task_8_2_synth-Nauruz-Guliev/blob/main/screenshots/listening_to_recording.png)
-- При записи/воспроизведении учитывается время между нажатиями на клавиши. 
-- Возможность смены проигрываемой мелодии на следующую/предыдущую. 
-
-## Что не работает? (но несложно реализовать при наличиии времени)
-- Невозможно сменить проигрываемую мелодию, если другая мелодия ещё играет.
-- Нет паузы воспроизведения. Придётся слушать мелодию до конца. 
-- После сохранения, новая мелодия не появляется сразу же в "плейлисте". Необходим перезапуск синтезатора.
-- Ползунок громкости не работает для воспроизводимой мелодии. 
-- Возможно ещё что-то, что я забыл или не смог учесть. =)
+## Midi keyboard
+Simple midi keyboard for playing 12 notes. <br />
+## Features:
+- Playing notes using NUMPAD.
+- Switching octaves/channels/instruments with a dropdown menu.
+- Setting sound volume with a slider.
+- Progress bar for current song that is being played.
+- Recording melody.
+- Saving recorded melody with an ".ngm" extension.
+- Playing recorded melodies. (Note: can not switch to next/previous untill current is done)
